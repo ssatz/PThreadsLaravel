@@ -15,21 +15,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Connect.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Connect.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Threads/Connect.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="25" column="29" lean-forward="false" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="29" />
+            <state relative-caret-position="236">
+              <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Query.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Query.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Threads/Query.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="35" column="33" lean-forward="true" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
+            <state relative-caret-position="270">
+              <caret line="29" column="33" lean-forward="true" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -48,8 +48,8 @@
       <file leaf-file-name="PthreadsMail.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Console/Commands/PthreadsMail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+            <state relative-caret-position="253">
+              <caret line="49" column="1" lean-forward="true" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
               <folding>
                 <element signature="e#44#75#0#PHP" expanded="true" />
                 <marker date="1493468113627" expanded="true" signature="934:978" ph="Select name,... users" />
@@ -132,13 +132,13 @@
         <option value="$PROJECT_DIR$/app" />
         <option value="$PROJECT_DIR$/Command/PThreadsMail.php" />
         <option value="$PROJECT_DIR$/app.php" />
-        <option value="$PROJECT_DIR$/Threads/Query.php" />
         <option value="$PROJECT_DIR$/Console/Commands/PthreadsMail.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/artisan-config.php" />
         <option value="$PROJECT_DIR$/config/database.php" />
         <option value="$PROJECT_DIR$/Console/Commands/ImportUser.php" />
         <option value="$PROJECT_DIR$/Threads/Connect.php" />
+        <option value="$PROJECT_DIR$/Threads/Query.php" />
       </list>
     </option>
   </component>
@@ -335,12 +335,12 @@
       <option name="presentableId" value="Default" />
       <updated>1493463301384</updated>
       <workItem from="1493463304629" duration="4817000" />
-      <workItem from="1493470642118" duration="6292000" />
+      <workItem from="1493470642118" duration="7166000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11109000" />
+    <option name="totallyTimeSpent" value="11983000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -479,18 +479,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Console/Commands/PthreadsMail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="50" column="0" lean-forward="true" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding>
-            <element signature="e#44#75#0#PHP" expanded="true" />
-            <marker date="1493468113627" expanded="true" signature="934:978" ph="Select name,... users" />
-            <marker date="1493468113627" expanded="true" signature="1016:1065" ph="Select name,... users" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Console/Commands/ImportUser.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="117">
@@ -502,18 +490,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Threads/Query.php">
+    <entry file="file://$PROJECT_DIR$/Console/Commands/PthreadsMail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="33" lean-forward="true" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
-          <folding />
+        <state relative-caret-position="253">
+          <caret line="49" column="1" lean-forward="true" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
+          <folding>
+            <element signature="e#44#75#0#PHP" expanded="true" />
+            <marker date="1493468113627" expanded="true" signature="934:978" ph="Select name,... users" />
+            <marker date="1493468113627" expanded="true" signature="1016:1065" ph="Select name,... users" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Threads/Connect.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="25" column="29" lean-forward="false" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="29" />
+        <state relative-caret-position="236">
+          <caret line="24" column="5" lean-forward="true" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Threads/Query.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="29" column="33" lean-forward="true" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
           <folding />
         </state>
       </provider>
