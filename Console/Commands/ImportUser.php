@@ -55,6 +55,6 @@ class ImportUser extends Command
             $sth->bindValue(':email', $row[1], PDO::PARAM_STR);
             $sth->execute(); //if the function return false then the iteration will stop
         });
-        $this->info('Job Queued');
+        $this->info('Import dones');
     }
 }
