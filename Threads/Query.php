@@ -18,19 +18,22 @@ class Query extends \Threaded
         $sth = $mysql->prepare($this->sql);
         $sth->execute();
         $results = $sth->fetchAll();
-        print_r(count($results));
-        /*$transport = \Swift_SmtpTransport::newInstance('node4.mailpixels.com', 587)
-            ->setUsername('dinu.865@gmail.com')
-            ->setPassword('spiceuser')
-            ->setEncryption('TLS');
+        $transport = new \Swift_SmtpTransport();
+        $transport->setHost('node4.mailpixels.com');
+        $transport->setPort(587);
+        $transport->setPassword(spiceuser);
+        $transport->setUsername('dinu.865@gmail.com');
+        $transport->setPassword('spiceuser');
+        $transport->setEncryption('TLS');
 
-        $mailer = \Swift_Mailer::newInstance($transport);
-        $message = \Swift_Message::newInstance('PHP Threads Test')
+
+        $mailer = new \Swift_Mailer($transport);
+        $message = new \Swift_Message('PHP TEST PThreads');
             ->setFrom(array('no-reply@freshworker.com' => 'PHP Test'))
             ->setBody('PHP Threads Test');
         foreach ($results as $result){
             $message->setTo($result['email']);
             $mailer->send($message);
-        }*/
+        }
     }
 }
