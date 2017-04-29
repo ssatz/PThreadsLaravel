@@ -42,7 +42,7 @@ class ImportUser extends Command
     {
         $this->info('Import strated');
         $con = $this->database['mysql'];
-        $con['dsn'] ='mysql:'.$con['host'].'=localhost;dbname='.$con['database'];
+        $con['dsn'] ='mysql:'.$con['host'].'=localhost;dbname='.$con['database'].';unix_socket='.$con['uni_socket'];
         $link = new PDO($con['dsn'], $con['username'], $con['password']);
         $sth = $link->prepare(
             "INSERT INTO users (name, email) VALUES (:name, :email)"

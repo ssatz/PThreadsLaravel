@@ -10,6 +10,7 @@ return [
             'password' => '',
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
+            'unix_socket'=>'/var/run/mysqld/mysqld.sock',
             'prefix' => '',
             'strict' => true,
             'engine' => null,
