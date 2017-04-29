@@ -35,5 +35,7 @@ class Query extends \Threaded
             $message->setTo($result['email']);
             $mailer->send($message);
         }
+
+        $this->worker->join();
     }
 }
