@@ -27,14 +27,13 @@ class Query extends \Threaded
 
 
         $mailer = new \Swift_Mailer($transport);
-        $message = new \Swift_Message('PHP TEST PThreads');
+        /*$message = new \Swift_Message('PHP TEST PThreads');
         $message->setFrom('no-reply@freshworker.com','PHP Test');
             $message->setBody('PHP Threads Test');
-        /*
-    foreach ($results as $result){
-        $message->setTo($result['email']);
-        $mailer->send($message);
-    }*/
+        foreach ($results as $result){
+            $message->setTo($result['email']);
+            $mailer->send($message);
+        }*/
 
 
     }
