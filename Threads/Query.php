@@ -21,12 +21,11 @@ class Query extends \Threaded
         $transport = new \Swift_SmtpTransport();
         $transport->setHost('node4.mailpixels.com');
         $transport->setPort(587);
-        $transport->setPassword(spiceuser);
         $transport->setUsername('dinu.865@gmail.com');
         $transport->setPassword('spiceuser');
         $transport->setEncryption('TLS');
 
-
+        /*
         $mailer = new \Swift_Mailer($transport);
         $message = new \Swift_Message('PHP TEST PThreads');
         $message->setFrom(array('no-reply@freshworker.com' => 'PHP Test'));
@@ -34,8 +33,8 @@ class Query extends \Threaded
         foreach ($results as $result){
             $message->setTo($result['email']);
             $mailer->send($message);
-        }
+        }*/
 
-        $this->worker->join();
+
     }
 }
