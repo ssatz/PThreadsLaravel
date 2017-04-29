@@ -37,6 +37,7 @@ class Query extends \Threaded
         $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
         foreach ($results as $result){
             $mail->addAddress($result['email'], $result['name']);
+            print_r($result);
             $mail->send();
         }
 
