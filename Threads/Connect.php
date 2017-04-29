@@ -11,7 +11,7 @@ class Connect extends \Worker
     protected static $link;
     public function __construct($db)
     {
-        $this->dsn ='mysql:'.$db['host'].'=localhost;dbname='.$db['database'];
+        $this->dsn ='mysql:'.$db['host'].'=localhost;dbname='.$db['database'].';unix_socket='.$db['unix_socket'];
         $this->username=$db['username'];
         $this->password=$db['password'];
     }
