@@ -1,0 +1,26 @@
+{
+    "name": "segadora/artisan",
+    "Description": "Laravel Artisan as a Package",
+    "require": {
+        "php": ">=5.5.9",
+        "illuminate/contracts": "5.4.*",
+        "illuminate/container": "5.4.*",
+        "illuminate/console": "5.4.*",
+        "illuminate/support": "5.4.*",
+        "illuminate/filesystem": "5.4.*"
+    },
+    "authors": [
+        {
+            "name": "moon0326",
+            "email": "kmk1986@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Moon\\Artisan\\": "./src/",
+            "Moon\\Illuminate\\Foundation\\Console\\": "./illuminate/Foundation/Console/",
+            "Artisan\\": "../../../"
+        }
+    },
+    "minimum-stability": "stable"
+}

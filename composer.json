@@ -1,0 +1,29 @@
+{
+    "name": "satz/pthreads",
+    "description": "Async Email Sending using PHP Pthreads with ZTS Enabled",
+    "type": "project",
+    "require": {
+        "moon/artisan": "^1.7",
+        "swiftmailer/swiftmailer": "^5.4",
+        "league/csv": "^8.0"
+    },
+    "require-dev": {
+
+    },
+    "autoload": {
+        "classmap": [
+            "Threads"
+        ],
+        "psr-4": {
+            "Threads\\":  "Threads/"
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "sathish",
+            "email": "sathish.thi@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}

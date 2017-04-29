@@ -1,0 +1,51 @@
+#!/usr/bin/env php
+<?php
+
+$fromPackage = __DIR__."/../../autoload.php";
+
+if (file_exists($fromPackage)) {
+    require_once $fromPackage;
+} else {
+    require_once "./vendor/autoload.php";
+}
+
+use Symfony\Component\Console\Input\ArgvInput;
+use Symfony\Component\Console\Output\ConsoleOutput;
+
+/*
+|--------------------------------------------------------------------------
+| Create The Application
+|--------------------------------------------------------------------------
+|
+| First we need to get an application instance. This creates an instance
+| of the application / container and bootstraps the application so it
+| is ready to receive HTTP / Console requests from the environment.
+|
+*/
+
+
+/*
+|--------------------------------------------------------------------------
+| Run The Artisan Application
+|--------------------------------------------------------------------------
+|
+| When we run the console application, the current CLI command will be
+| executed in this console and the response sent back to a terminal
+| or another output device for the developers. Here goes nothing!
+|
+*/
+$app = new Moon\Artisan\Stub\Application;
+$app->singleton(
+    'Illuminate\Contracts\Debug\ExceptionHandler',
+    'Moon\\Artisan\Exceptions\Handler'
+);
+
+$app->instance('path', getcwd());
+
+
+$kernel = new Moon\Artisan\Console\Kernel(
+    $app,
+    new Moon\Artisan\Stub\Dispatcher()
+);
+
+exit($kernel->handle(new ArgvInput, new ConsoleOutput));
