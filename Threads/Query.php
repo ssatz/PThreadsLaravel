@@ -18,7 +18,8 @@ class Query extends \Threaded
         $sth = $mysql->prepare($this->sql);
         $sth->execute();
         $results = $sth->fetchAll();
-        $transport = \Swift_SmtpTransport::newInstance('node4.mailpixels.com', 587)
+        print_r(count($results));
+        /*$transport = \Swift_SmtpTransport::newInstance('node4.mailpixels.com', 587)
             ->setUsername('dinu.865@gmail.com')
             ->setPassword('spiceuser')
             ->setEncryption('TLS');
@@ -27,10 +28,9 @@ class Query extends \Threaded
         $message = \Swift_Message::newInstance('PHP Threads Test')
             ->setFrom(array('no-reply@freshworker.com' => 'PHP Test'))
             ->setBody('PHP Threads Test');
-        print_r(count($results));
         foreach ($results as $result){
             $message->setTo($result['email']);
             $mailer->send($message);
-        }
+        }*/
     }
 }
