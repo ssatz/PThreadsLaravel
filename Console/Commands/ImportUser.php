@@ -53,7 +53,7 @@ class ImportUser extends Command
             //Do not forget to validate your data before inserting it in your database
             $sth->bindValue(':name', $row[0], PDO::PARAM_STR);
             $sth->bindValue(':email', $row[1], PDO::PARAM_STR);
-            //return $sth->execute(); //if the function return false then the iteration will stop
+            $sth->execute(); //if the function return false then the iteration will stop
         });
         $this->info('Job Queued');
     }

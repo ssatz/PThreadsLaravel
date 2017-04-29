@@ -63,10 +63,10 @@
         <entry file="file://$PROJECT_DIR$/Console/Commands/ImportUser.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
-              <caret line="55" column="14" lean-forward="false" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="14" />
+              <caret line="55" column="12" lean-forward="false" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="12" />
               <folding>
                 <element signature="e#44#75#0#PHP" expanded="true" />
-                <marker date="1493476232832" expanded="true" signature="1098:1152" ph="INSERT INTO users... " />
+                <marker date="1493476534510" expanded="true" signature="1098:1152" ph="INSERT INTO users... " />
               </folding>
             </state>
           </provider>
@@ -307,12 +307,12 @@
       <option name="presentableId" value="Default" />
       <updated>1493463301384</updated>
       <workItem from="1493463304629" duration="4817000" />
-      <workItem from="1493470642118" duration="4573000" />
+      <workItem from="1493470642118" duration="4876000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9390000" />
+    <option name="totallyTimeSpent" value="9693000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -482,10 +482,10 @@
     <entry file="file://$PROJECT_DIR$/Console/Commands/ImportUser.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="55" column="14" lean-forward="false" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="14" />
+          <caret line="55" column="12" lean-forward="false" selection-start-line="55" selection-start-column="12" selection-end-line="55" selection-end-column="12" />
           <folding>
             <element signature="e#44#75#0#PHP" expanded="true" />
-            <marker date="1493476232832" expanded="true" signature="1098:1152" ph="INSERT INTO users... " />
+            <marker date="1493476534510" expanded="true" signature="1098:1152" ph="INSERT INTO users... " />
           </folding>
         </state>
       </provider>
