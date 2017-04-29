@@ -28,7 +28,7 @@ class Query extends \Threaded
 
         $mailer = new \Swift_Mailer($transport);
         $message = new \Swift_Message('PHP TEST PThreads');
-        $message->setFrom(array('no-reply@freshworker.com' => 'PHP Test'));
+        $message->setFrom('no-reply@freshworker.com','PHP Test');
             $message->setBody('PHP Threads Test');
         /*
     foreach ($results as $result){
