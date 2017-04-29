@@ -25,15 +25,16 @@ class Query extends \Threaded
         $transport->setPassword('spiceuser');
         $transport->setEncryption('TLS');
 
-        /*
+
         $mailer = new \Swift_Mailer($transport);
         $message = new \Swift_Message('PHP TEST PThreads');
         $message->setFrom(array('no-reply@freshworker.com' => 'PHP Test'));
             $message->setBody('PHP Threads Test');
-        foreach ($results as $result){
-            $message->setTo($result['email']);
-            $mailer->send($message);
-        }*/
+        /*
+    foreach ($results as $result){
+        $message->setTo($result['email']);
+        $mailer->send($message);
+    }*/
 
 
     }
