@@ -4,6 +4,7 @@ namespace Artisan\Console\Commands;
 
 use Illuminate\Console\Command;
 use League\Csv\Reader;
+use PDO;
 
 class ImportUser extends Command
 {
@@ -42,11 +43,11 @@ class ImportUser extends Command
         $this->info('Import strated');
         $con = $this->database['mysql'];
         $con['dsn'] ='mysql:'.$con['host'].'=localhost;dbname='.$con['database'];
-        $sth = new \PDO($con['dsn'], $con['username'], $con['password']);
-        $sth = $sth->prepare(
+        $link = new PDO($con['dsn'], $con['username'], $con['password']);
+        $sth = $link->prepare(
             "INSERT INTO users (name, email) VALUES (:name, :email)"
         );
-        $csv = Reader::createFromPath(storage_path('imports/2015.csv'));
+        $csv = Reader::createFromPath(getcwd().'/Storage/2015.csv');
         $csv->setOffset(1);
         $nbInsert = $csv->each(function ($row) use (&$sth) {
             //Do not forget to validate your data before inserting it in your database
