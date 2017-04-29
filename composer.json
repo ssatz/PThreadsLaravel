@@ -4,8 +4,8 @@
     "type": "project",
     "require": {
         "moon/artisan": "^1.7",
-        "swiftmailer/swiftmailer": "^5.4",
-        "league/csv": "^8.0"
+        "league/csv": "^8.0",
+        "phpmailer/phpmailer": "^5.2"
     },
     "require-dev": {
 

@@ -13,28 +13,32 @@ class Query extends \Threaded
     }
 
     public function run()    {
-        require '././vendor/swiftmailer/swiftmailer/lib/swift_required.php';
+        require '././vendor/phpmailer/PHPMailerAutoload.php';
         $mysql = $this->worker->createConnection();
         $sth = $mysql->prepare($this->sql);
         $sth->execute();
         $results = $sth->fetchAll();
-        $transport = new \Swift_SmtpTransport();
-        $transport->setHost('node4.mailpixels.com');
-        $transport->setPort(587);
-        $transport->setUsername('dinu.865@gmail.com');
-        $transport->setPassword('spiceuser');
-        $transport->setEncryption('TLS');
+        $mail = new PHPMailer;
 
+        //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
-        $mailer = new \Swift_Mailer($transport);
+        $mail->isSMTP();                                      // Set mailer to use SMTP
+        $mail->Host = 'node4.mailpixels.com';  // Specify main and backup SMTP servers
+        $mail->SMTPAuth = true;                               // Enable SMTP authentication
+        $mail->Username = 'dinu.865@gmail.com';                 // SMTP username
+        $mail->Password = 'spiceuser';                           // SMTP password
+        $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+        $mail->Port = 587;                                    // TCP port to connect to
+
+        $mail->setFrom('no-reply@freshworker.com', 'Mailer');
+        $mail->isHTML(true);                                  // Set email format to HTML
+        $mail->Subject = 'Here is the subject';
+        $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+        $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
         foreach ($results as $result){
-            $message = new \Swift_Message('PHP TEST PThreads');
-            $message->setFrom('no-reply@freshworker.com','PHP Test');
-            $message->setBody('PHP Threads Test');
-            $message->setTo($result['email']);
-            $mailer->send($message);
+            $mail->addAddress($result['email'], $result['name']);
+            $mail->send();
         }
-
 
     }
 }
