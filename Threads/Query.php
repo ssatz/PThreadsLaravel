@@ -13,7 +13,7 @@ class Query extends \Threaded
     }
 
     public function run()    {
-        require '././vendor/phpmailer/PHPMailerAutoload.php';
+        require '././vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
         $mysql = $this->worker->createConnection();
         $sth = $mysql->prepare($this->sql);
         $sth->execute();
