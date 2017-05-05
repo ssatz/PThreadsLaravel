@@ -23,7 +23,7 @@ class Query extends \Threaded
             $mail->SMTPDebug = 3;                               // Enable verbose debug output
             $mail->isSMTP();                                      // Set mailer to use SMTP
             $mail->Host = 'node4.mailpixels.com';  // Specify main and backup SMTP servers
-            $mail->SMTPAuth = false;
+            $mail->SMTPAuth = true;
             $mail->SMTPSecure = 'tls';
             $mail->SMTPOptions = array(
                 'ssl' => array(
