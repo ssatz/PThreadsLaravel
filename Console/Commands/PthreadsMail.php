@@ -42,8 +42,11 @@ class PthreadsMail extends Command
     {
         $start = microtime(true);
         $pool = new \Pool(4, Connect::class, [$this->database['mysql']]);
-        $pool->submit(new Query('Select name, email from users  Limit 1,50000'));
-        $pool->submit(new Query('Select name, email from users  Limit 50000,100000'));
+        $pool->submit(new Query('Select name, email from users  Limit 1,30000'));
+        $pool->submit(new Query('Select name, email from users  Limit 30001,60000'));
+        $pool->submit(new Query('Select name, email from users  Limit 60001,90000'));
+        $pool->submit(new Query('Select name, email from users  Limit 90001,120000'));
+        $pool->submit(new Query('Select name, email from users  Limit 120001,135000'));
         $pool->shutdown();
         printf("Done for %.2f seconds".PHP_EOL,microtime(true)-$start);
     }

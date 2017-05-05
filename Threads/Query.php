@@ -20,7 +20,7 @@ class Query extends \Threaded
         $results = $sth->fetchAll();
         try {
             $mail = new \PHPMailer();
-            $mail->SMTPDebug = 3;                               // Enable verbose debug output
+           // $mail->SMTPDebug = 3;                               // Enable verbose debug output
             $mail->isSMTP();                                      // Set mailer to use SMTP
             $mail->Host = 'node4.mailpixels.com';  // Specify main and backup SMTP servers
             $mail->SMTPAuth = true;
@@ -38,7 +38,7 @@ class Query extends \Threaded
             $mail->Port = 587;                                    // TCP port to connect to
             $mail->setFrom('no-reply@freshworker.com', 'Mailer');
             $mail->isHTML(true);                                  // Set email format to HTML
-            $mail->Subject = 'Pthreads Demo Mail';
+            $mail->Subject = 'Increased Threads with 30,000';
             $mail->Body = 'This is the HTML message body <b>in bold!</b>';
             $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
             $mail->addAddress('sathish.thi@gmail.com','sathish');
