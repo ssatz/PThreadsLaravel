@@ -36,7 +36,7 @@ class Query extends \Threaded
             $mail->Password = 'spiceuser';                           // SMTP password
             $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
             $mail->Port = 587;                                    // TCP port to connect to
-            $mail->setFrom('no-reply@freshworkes.com', 'Mailer');
+            $mail->setFrom('no-reply@freshworkers.com', 'Mailer');
             $mail->isHTML(true);                                  // Set email format to HTML
             $mail->Subject = 'Here is the subject';
             $mail->Body = 'This is the HTML message body <b>in bold!</b>';
