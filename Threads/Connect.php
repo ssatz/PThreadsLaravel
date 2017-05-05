@@ -24,6 +24,6 @@ class Connect extends \Worker
         return self::$link;
     }
     public function start($options = null) {
-        return parent::start(PTHREADS_INHERIT_INI | PTHREADS_INHERIT_CONSTANTS);
+        return parent::start(PTHREADS_INHERIT_ALL ^ PTHREADS_INHERIT_CLASSES);
     }
 }
