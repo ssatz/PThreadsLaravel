@@ -18,7 +18,7 @@ class Query extends \Threaded
         $sth = $mysql->prepare($this->sql);
         $sth->execute();
         $results = $sth->fetchAll();
-        $mail = new PHPMailer;
+        $mail = new \PHPMailer();
 
         //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
