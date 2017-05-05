@@ -19,7 +19,7 @@ class Query extends \Threaded
         $sth->execute();
         $results = $sth->fetchAll();
         $mail = new \PHPMailer();
-
+        print_r($mail);
         //$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
         $mail->isSMTP();                                      // Set mailer to use SMTP
