@@ -18,13 +18,20 @@ class Query extends \Threaded
         $sth = $mysql->prepare($this->sql);
         $sth->execute();
         $results = $sth->fetchAll();
-        print_r(count($results));
         try {
             $mail = new \PHPMailer();
-            //$mail->SMTPDebug = 3;                               // Enable verbose debug output
+            $mail->SMTPDebug = 3;                               // Enable verbose debug output
             $mail->isSMTP();                                      // Set mailer to use SMTP
             $mail->Host = 'node4.mailpixels.com';  // Specify main and backup SMTP servers
-            $mail->SMTPAuth = true;                               // Enable SMTP authentication
+            $mail->SMTPAuth = false;
+            $mail->SMTPSecure = 'tls';
+            $mail->SMTPOptions = array(
+                'ssl' => array(
+                    'verify_peer' => false,
+                    'verify_peer_name' => false,
+                    'allow_self_signed' => true
+                )
+            );                          // Enable SMTP authentication
             $mail->Username = 'dinu.865@gmail.com';                 // SMTP username
             $mail->Password = 'spiceuser';                           // SMTP password
             $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
