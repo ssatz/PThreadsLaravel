@@ -18,6 +18,7 @@ class Query extends \Threaded
         $sth = $mysql->prepare($this->sql);
         $sth->execute();
         $results = $sth->fetchAll();
+        print_r(count($results));
         try {
             $mail = new \PHPMailer();
             print_r($mail);
