@@ -22,7 +22,7 @@ class Query extends \Threaded
             $mail = new \PHPMailer();
            // $mail->SMTPDebug = 3;                               // Enable verbose debug output
             $mail->isSMTP();                                      // Set mailer to use SMTP
-            $mail->Host = 'node4.mailpixels.com';  // Specify main and backup SMTP servers
+            $mail->Host = 'smtphost';  // Specify main and backup SMTP servers
             $mail->SMTPAuth = true;
             $mail->SMTPSecure = 'tls';
             $mail->SMTPOptions = array(
@@ -33,10 +33,10 @@ class Query extends \Threaded
                 )
             );                          // Enable SMTP authentication
             $mail->Username = 'dinu.865@gmail.com';                 // SMTP username
-            $mail->Password = 'spiceuser';                           // SMTP password
+            $mail->Password = '********';                           // SMTP password
             $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
             $mail->Port = 587;                                    // TCP port to connect to
-            $mail->setFrom('no-reply@freshworker.com', 'Mailer');
+            $mail->setFrom('no-reply@domain.com', 'Mailer');
             $mail->isHTML(true);                                  // Set email format to HTML
             $mail->Subject = 'Increased Threads with 30,000';
             $mail->Body = 'This is the HTML message body <b>in bold!</b>';

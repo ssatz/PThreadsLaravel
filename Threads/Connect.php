@@ -20,7 +20,6 @@ class Connect extends \Worker
         if (!self::$link) {
             self::$link = new \PDO($this->dsn,$this->username,$this->password);
         }
-        /* do some exception/error stuff here maybe */
         return self::$link;
     }
     public function start(int $options = null) {
